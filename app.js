@@ -3,7 +3,9 @@ const app = express();
 const port = 3000;
 
 // root route
-app.get('/', (req, res) => res.send('Welcome to Home Page'));
+app.get('/', (req, res) => {
+  res.render('home.ejs')
+});
 
 // Handle unexisting routes (404 response)
 app.use(function(req, res, next) {
